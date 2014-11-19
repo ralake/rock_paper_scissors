@@ -5,5 +5,5 @@ Feature: Starting a game of rock paper scissors
 
 Scenario: Visiting the homepage
   Given I visit the homepage
-  When I click "Play"
+  When I click "Register"
   Then I should see "Enter your name"
