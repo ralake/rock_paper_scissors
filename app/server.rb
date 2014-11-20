@@ -7,6 +7,10 @@ class Rock_Paper_Scissors < Sinatra::Base
     erb :index
   end
 
+  get '/registration' do
+    erb :registration
+  end
+
   post '/registration' do
     erb :registration
   end
