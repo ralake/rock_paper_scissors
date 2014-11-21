@@ -10,7 +10,8 @@ describe Player do
   end
 
   it 'can choose a weapon' do
-    expect(rich.choice("rock")).to eq("rock")
+    rich.choose("Rock")
+    expect(rich.choice).to eq("Rock")
   end
 
 end

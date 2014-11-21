@@ -6,6 +6,8 @@ require './lib/game'
 class Rock_Paper_Scissors < Sinatra::Base
 
   GAME = Game.new
+
+  enable :sessions
   
   get '/' do
     erb :index
@@ -21,15 +23,22 @@ class Rock_Paper_Scissors < Sinatra::Base
 
   post '/game' do
     @player = Player.new(params[:player_name])
+    session[:player] = @player.object_id
     @computer_player = ComputerPlayer.new
+    session[:computer_player] = @computer_player.object_id
     GAME.add_player(@player)
     GAME.add_player(@computer_player)
-    @player.choice(params[:choice])
-    @computer_player.choice
     erb :game
   end
 
-
+  post '/result' do
+    @player = GAME.players.select { |player| player.object_id == session[:player] }.first
+    @computer_player = GAME.players.select { |player| player.object_id == session[:computer_player] }.first
+    @player.choose(params[:choice])
+    @computer_player.choose
+    @result = GAME.results
+    erb :result
+  end
 
   run! if app_file == $0
 

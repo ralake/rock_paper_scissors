@@ -1,7 +1,7 @@
 Given(/^I make my choice of weapon$/) do
-  visit '/game'
+  click_button("Rock")
 end
 
 Then(/^I should see the result of the game$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content("Play again?")
 end

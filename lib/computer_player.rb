@@ -1,13 +1,13 @@
 class ComputerPlayer
 
-  attr_reader :options
+  attr_reader :options, :choice
 
   def initialize
     @options = [:rock, :paper, :scissors]
   end
 
-  def choice
-    options.sample
+  def choose
+    @choice = options.sample
   end
 
 end

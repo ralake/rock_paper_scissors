@@ -11,7 +11,7 @@ class Game
   end
 
   def winning_combinations
-    { :rock => :scissors, :paper => :rock, :scissors => :paper }
+    { "Rock" => "Scissors", "Paper" => "Rock", "Scissors" => "Paper" }
   end
 
   def won?
@@ -26,7 +26,7 @@ class Game
     players[0].choice == players[1].choice
   end
 
-  def result
+  def results
     return "You win!" if won?
     return "It's a draw." if draw?
     return "You lose..." if lost?
