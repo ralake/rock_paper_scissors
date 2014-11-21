@@ -22,8 +22,10 @@ class Rock_Paper_Scissors < Sinatra::Base
   post '/game' do
     @player = Player.new(params[:player_name])
     @computer_player = ComputerPlayer.new
-    @player.choose(GAME, params[:choice])
-    @computer_player.choose
+    GAME.add_player(@player)
+    GAME.add_player(@computer_player)
+    @player.choice(params[:choice])
+    @computer_player.choice
     erb :game
   end
 
