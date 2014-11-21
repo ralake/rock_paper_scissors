@@ -18,17 +18,17 @@ describe Game do
 
   it 'knows if a player has beaten the computer' do
     game.add_player(hal)
-    expect(game.won?).to be true
+    expect(game.result).to eq("You win!")
   end
 
   it 'knows if a player has been beaten by the computer' do
     game.add_player(hal2)
-    expect(game.won?).to be false
+    expect(game.result).to eq("You lose...")
   end
 
   it 'knows if the game is a draw' do
     game.add_player(hal3)
-    expect(game.won?).to eq("Draw!")
+    expect(game.result).to eq("It's a draw.")
   end
   
 end

@@ -15,9 +15,21 @@ class Game
   end
 
   def won?
-    return true if players[0].choice == winning_combinations.key(players[1].choice)
-    return "Draw!" if players[0].choice == players[1].choice
-    return false if players[1].choice != winning_combinations.key(players[1].choice)
+    players[0].choice == winning_combinations.key(players[1].choice)
+  end
+
+  def lost?
+    players[1].choice != winning_combinations.key(players[1].choice)
+  end
+
+  def draw?
+    players[0].choice == players[1].choice
+  end
+
+  def result
+    return "You win!" if won?
+    return "It's a draw." if draw?
+    return "You lose..." if lost?
   end
 
 end
