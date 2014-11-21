@@ -3,7 +3,7 @@ class ComputerPlayer
   attr_reader :options, :choice
 
   def initialize
-    @options = [:rock, :paper, :scissors]
+    @options = ["Rock", "Paper", "Scissors"]
   end
 
   def choose

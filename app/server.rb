@@ -21,6 +21,12 @@ class Rock_Paper_Scissors < Sinatra::Base
     erb :registration
   end
 
+  get '/game' do
+    @player = GAME.players.select { |player| player.object_id == session[:player] }.first
+    @computer_player = GAME.players.select { |player| player.object_id == session[:computer_player] }.first
+    erb :game
+  end
+
   post '/game' do
     @player = Player.new(params[:player_name])
     session[:player] = @player.object_id

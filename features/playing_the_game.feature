@@ -12,8 +12,3 @@ Background: Visiting the registration page
 Scenario: Playing the game
   Given I make my choice of weapon
   Then I should see the result of the game
-
-Scenario: Re-match
-  Given I have played the game
-  When I click "Play again"
-  Then I should be asked to make my choice
