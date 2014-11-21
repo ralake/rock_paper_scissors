@@ -6,4 +6,8 @@ class Player
     @name = name
   end
 
+  def choice(weapon)
+    @choice = weapon
+  end
+
 end
