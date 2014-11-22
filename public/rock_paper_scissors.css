@@ -1,0 +1,85 @@
+body {
+      background-image: url("rock-paper-scissors-hi-res-1.jpeg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    color: #234954;
+    font-size: 100px;
+    text-align: center;
+    position: relative;
+    top: -20px;
+}
+
+h2 {
+    font-family: Helvetica, sans-serif;
+    color: #015D7F;
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: -50px;
+}
+
+.reg {
+      font-family: Helvetica, sans-serif;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: table;
+      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto; 
+      background-color: #00627F;
+      border-radius: 6px;
+      border-color: #32BFE8;
+      border: 2px solid white;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      
+}
+
+.registration {
+              display: table;
+              margin: 0 auto;
+              top: -30px;
+      
+}
+
+.enter_name { 
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+            text-decoration: none;
+            font-size: 50px;
+            float: left;
+            color: #015D7F;
+            position: relative;
+            top: -50px;
+            right: 20px;
+            background-color: transparent;
+}
+
+.name_text {
+            width: 300px;
+            height: 50px;
+            font-size: 50px;
+            padding: 0px;
+            border-style: solid;
+            border-width: 0px 0px 0px 0px;
+            outline: 0;
+            color: #0296CC;
+            background-color: transparent;
+}
+
+.name{
+      font-family: Helvetica, sans-serif;
+      text-align: center;
+      text-decoration: none;
+      float: right;
+      /*top: -100px;
+      right: 300px;*/
+}
