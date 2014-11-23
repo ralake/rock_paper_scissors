@@ -64,7 +64,7 @@ h2 {
 }
 
 .name_text {
-            width: 300px;
+            width: 200px;
             height: 50px;
             font-size: 50px;
             padding: 0px;
@@ -73,13 +73,32 @@ h2 {
             outline: 0;
             color: #0296CC;
             background-color: transparent;
+            float: left;
 }
 
-.name{
+.name {
       font-family: Helvetica, sans-serif;
       text-align: center;
       text-decoration: none;
       float: right;
-      /*top: -100px;
-      right: 300px;*/
+}
+
+.play_button {
+              font-family: Helvetica, sans-serif;
+              text-align: center;
+              text-decoration: none;
+              font-size: 20px;
+              color: white;
+              display: table;
+              margin: 0 auto;
+              margin-left: auto;
+              margin-right: auto; 
+              background-color: #00627F;
+              border-radius: 6px;
+              border-color: #32BFE8;
+              border: 2px solid white;
+              padding-left: 30px;
+              padding-right: 30px;
+              padding-top: 12px;
+              padding-bottom: 12px;
 }
