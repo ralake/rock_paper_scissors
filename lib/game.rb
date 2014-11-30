@@ -10,6 +10,10 @@ class Game
     players << player
   end
 
+  def find_player(player_type)
+    self.players.select { |player| player.is_a?(player_type) }.first
+  end
+
   def winning_combinations
     { "Rock" => "Scissors",
      "Paper" => "Rock", 

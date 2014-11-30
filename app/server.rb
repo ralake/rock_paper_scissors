@@ -22,27 +22,31 @@ class Rock_Paper_Scissors < Sinatra::Base
   end
 
   get '/game' do
-    @player = GAME.players.select { |player| player.object_id == session[:player] }.first
-    @computer_player = GAME.players.select { |player| player.object_id == session[:computer_player] }.first
+    if session[:game]
+      game = session[:game]
+      @player = game.find_player(Player)
+    else
+    end
     erb :game
   end
 
   post '/game' do
     @player = Player.new(params[:player_name])
-    session[:player] = @player.object_id
     @computer_player = ComputerPlayer.new
-    session[:computer_player] = @computer_player.object_id
-    GAME.add_player(@player)
-    GAME.add_player(@computer_player)
+    game = Game.new
+    game.add_player(@player)
+    game.add_player(@computer_player)
+    session[:game] = game
     erb :game
   end
 
   post '/result' do
-    @player = GAME.players.select { |player| player.object_id == session[:player] }.first
-    @computer_player = GAME.players.select { |player| player.object_id == session[:computer_player] }.first
+    game = session[:game]
+    @player = game.find_player(Player)
+    @computer_player = game.find_player(ComputerPlayer)
     @player.choose(params[:choice])
     @computer_player.choose
-    @result = GAME.results
+    @result = game.results
     erb :result
   end
 

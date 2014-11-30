@@ -5,7 +5,7 @@ describe Game do
   let(:hal)         { double :ComputerPlayer, choice: "Scissors" }
   let(:droid)       { double :ComputerPlayer, choice: "Paper" }
   let(:johnny_five) { double :ComputerPlayer, choice: "Rock" }
-  let(:rich)        { double :Player , choice: "Rock" }
+  let(:rich)        { double :Player , is_a?: Player, choice: "Rock" }
   let(:clare)       { double :Player , choice: "Scissors" }
   let(:will)       { double :Player , choice: "Paper" }
   let(:game)        { Game.new }
@@ -13,6 +13,12 @@ describe Game do
   it 'can add a player' do
     game.add_player(rich)
     expect(game.players).to eq([rich])
+  end
+
+  it 'can select a specific type of player' do
+    game.add_player(rich)
+    game.add_player(droid)
+    expect(game.find_player(Player)).to eq(rich)
   end
 
   it 'knows that rock beats scissors' do
