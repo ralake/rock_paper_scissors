@@ -11,7 +11,9 @@ class Game
   end
 
   def winning_combinations
-    { "Rock" => "Scissors", "Paper" => "Rock", "Scissors" => "Paper" }
+    { "Rock" => "Scissors",
+     "Paper" => "Rock", 
+     "Scissors" => "Paper" }
   end
 
   def won?
