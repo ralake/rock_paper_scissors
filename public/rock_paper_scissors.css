@@ -18,10 +18,18 @@ h1 {
 h2 {
     font-family: Helvetica, sans-serif;
     color: #015D7F;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     position: relative;
-    top: -50px;
+    top: -120px;
+}
+
+h3 {
+    font-family: Helvetica, sans-serif;
+    color: #015D7F;
+    font-size: 50px;
+    position: relative;
+    left: -70px;
 }
 
 .reg {
@@ -181,4 +189,41 @@ h2 {
               border: 2px solid white;
               padding-top: 12px;
               padding-bottom: 12px;
+}
+
+.choice_message {
+                 font-family: Helvetica, sans-serif;
+                 color: #015D7F;
+                 font-size: 30px;
+                 text-align: center;
+                 position: relative;
+}
+
+.result {
+         font-family: Helvetica, sans-serif;
+         color: black;
+         font-size: 60px;
+         text-align: center;
+         position: relative;
+         margin: 0;
+         top: 18px;
+}
+
+.yes_button {
+             font-family: Helvetica, sans-serif;
+             text-align: center;
+             text-decoration: none;
+             font-size: 20px;
+             color: white;
+             margin: 10px;
+             width: 120px;
+             background-color: #00627F;
+             border-radius: 6px;
+             border-color: #32BFE8;
+             border: 2px solid white;
+             padding-top: 12px;
+             padding-bottom: 12px;
+             position: relative;
+             right: -150px;
+             top: -116px;
 }

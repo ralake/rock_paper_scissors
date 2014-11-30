@@ -1,9 +1,9 @@
 
-<p>You chose <%= @player.choice%> and the computer chose <%=@computer_player.choice%>...</p>
-<%= @result %>
+<p class="choice_message">You chose <%= @player.choice%> and the computer chose <%=@computer_player.choice%>...</p>
 
-<h3>Play again?<h3>
+<p class="result"><%= @result %></p>
 
-<form action="/game" method="get">
-  <input type="submit" value="Yes">
-</form>
+  <h3>Play again?</h3>
+  <form action="/game" method="get">
+    <input type="submit" class="yes_button" value="Yes">
+  </form>
