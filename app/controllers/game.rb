@@ -1,11 +1,9 @@
 class Rock_Paper_Scissors  
 
   get '/game' do
-    if session[:game]
-      game = session[:game]
-      @player = game.find_player(Player)
-    else
-    end
+    session[:game]
+    game = session[:game]
+    @player = game.find_player(Player)
     erb :game
   end
 

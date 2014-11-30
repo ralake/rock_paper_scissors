@@ -1,16 +1,11 @@
-<section class="greeting">
-  <div class="welcome">
-    <p>Hi <%= @player.name %>!</p>
-  </div>
-  <div class="weapon_choice">
-    <p>Choose your weapon...</p>
-  </div>
-</section>
+<div class="game_text">  
+  <p class="welcome">Hi <%= @player.name %>!</p>
+  <p class="weapon_choice">Choose your weapon...</p>
+</div>
+ 
+<form action="/result" class="weapons" method="post">
+  <input type="submit" class="rock_button" name="choice" value="Rock">
+  <input type="submit" class="paper_button" name="choice" value="Paper">
+  <input type="submit" class="scissors_button" name="choice" value="Scissors">
+</form>
 
-<section class="weapons">
-  <form action="/result" method="post">
-    <input type="submit" name="choice" value="Rock">
-    <input type="submit" name="choice" value="Paper">
-    <input type="submit" name="choice" value="Scissors">
-  </form>
-</section>

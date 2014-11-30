@@ -12,6 +12,7 @@ h1 {
     position: relative;
     top: -20px;
     height: 90px;
+    margin-bottom: 0;
 }
 
 h2 {
@@ -105,19 +106,14 @@ h2 {
               padding-bottom: 12px;
 }
 
-.greeting {
-            
-            display: table;
-            margin: 0 auto;
-            top: 100px;
-            position: relative;
+.game_text {
+            width: 700px;
 }
 
 .welcome {
           font-family: Helvetica, sans-serif;
           font-size: 50px;
           color: #015D7F;
-          width: 200px;
           height: 60px;
           float: left;
 }
@@ -125,7 +121,6 @@ h2 {
 .weapon_choice {
                 font-family: Helvetica, sans-serif;
                 font-size: 50px;
-                width: 550px;
                 float: right;
                 height: 60px;
 }
@@ -133,7 +128,57 @@ h2 {
 .weapons {
           margin-left: auto;
           margin-right: auto;
-          width: 300px;
-          top: -200px;
+          width: 420px;
 
+}
+
+.rock_button {
+              font-family: Helvetica, sans-serif;
+              text-align: center;
+              text-decoration: none;
+              font-size: 20px;
+              color: white;
+              float: left;
+              margin: 10px;
+              width: 120px;
+              background-color: #00627F;
+              border-radius: 6px;
+              border-color: #32BFE8;
+              border: 2px solid white;
+              padding-top: 12px;
+              padding-bottom: 12px;
+}
+
+.paper_button {
+              font-family: Helvetica, sans-serif;
+              text-align: center;
+              text-decoration: none;
+              font-size: 20px;
+              color: white;
+              float: left;
+              margin: 10px;
+              width: 120px;
+              background-color: #00627F;
+              border-radius: 6px;
+              border-color: #32BFE8;
+              border: 2px solid white;
+              padding-top: 12px;
+              padding-bottom: 12px;
+}
+
+.scissors_button {
+              font-family: Helvetica, sans-serif;
+              text-align: center;
+              text-decoration: none;
+              font-size: 20px;
+              color: white;
+              float: right;
+              margin: 10px;
+              width: 120px;
+              background-color: #00627F;
+              border-radius: 6px;
+              border-color: #32BFE8;
+              border: 2px solid white;
+              padding-top: 12px;
+              padding-bottom: 12px;
 }
